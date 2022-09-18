@@ -1,6 +1,14 @@
 package com.codefrnd.foodrecipesearch.db.entity
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(
+    tableName = "meal"
+)
 data class Meal(
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null,
     val idMeal: String,
     val strArea: String,
     val strCategory: String,
