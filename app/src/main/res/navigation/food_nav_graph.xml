@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/food_nav_graph"
+    app:startDestination="@id/searchFoodFragment">
+
+    <fragment
+        android:id="@+id/searchFoodFragment"
+        android:name="com.codefrnd.foodrecipesearch.ui.fragment.SearchFoodFragment"
+        android:label="SearchFoodFragment">
+        <action
+            android:id="@+id/action_searchFoodFragment_to_foodFragment"
+            app:destination="@id/foodFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/savedFoodFragment"
+        android:name="com.codefrnd.foodrecipesearch.ui.fragment.SavedFoodFragment"
+        android:label="SavedFoodFragment">
+        <action
+            android:id="@+id/action_savedFoodFragment_to_foodFragment"
+            app:destination="@id/foodFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.codefrnd.foodrecipesearch.ui.fragment.FoodFragment"
+        android:label="FoodFragment" />
+
+</navigation>
